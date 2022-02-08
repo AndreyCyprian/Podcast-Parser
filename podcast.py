@@ -6,7 +6,7 @@ import os, sys, subprocess
 #all of my arg parse arguments
 parser = argparse.ArgumentParser(description='podcast feedparser')
 parser.add_argument('-s', action='store_true', help= 'This argument will omit the summaries of the podcasts that you entered' )
-parser.add_argument('-n', type=int, help='')
+parser.add_argument('-n', type=int, help='This argument will retrive the last n amount of podcast')
 parser.add_argument('link', help='Please enter a link for the feedparser')
 
 args = parser.parse_args()
