@@ -25,13 +25,14 @@ def open_file(filename):
         opener ="open" if sys.platform == "darwin" else "xdg-open"
         subprocess.call([opener, filename])
 
+#if the s argument is added this method simply doesn't imclude the summary entry
 if args.s:
     for x in range(n):
         print(f'link {args.link}')
         print(feed.entries[x].title)
         print(feed.entries[x].author)
         print(feed.entries[x].published)
-else:
+else:#include all variables 
     for x in range(n):
         print(f'link {args.link}')
         print(feed.entries[x].title)
